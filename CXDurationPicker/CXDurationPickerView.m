@@ -405,6 +405,51 @@
     [self shiftDurationToStartPickerDate:pickerDate error:&error];
 }
 
+- (void)shiftDurationToStartPickerDate:(CXDurationPickerDate)pickerDate withDuration:(NSInteger)day{
+    
+    [self clearCurrentDuration];
+    
+    if(day == 0){
+        _startDate.day = pickerDate.day;
+        _startDate.month = pickerDate.month;
+        _startDate.year = pickerDate.year;
+        
+        _endDate.day = 0;
+        _endDate.month = 0;
+        _endDate.year = 0;
+        
+        [self createDuration];
+    }
+    else{
+        _startDate.day = pickerDate.day;
+        _startDate.month = pickerDate.month;
+        _startDate.year = pickerDate.year;
+        
+        NSDate *n1 = [CXDurationPickerUtils dateFromPickerDate:pickerDate];
+        
+        // Calculate number of days in current duration, accounting for days in month.
+        //
+        NSDateComponents *diff = [[NSDateComponents alloc] init];
+        diff.day = day;
+        
+        // Calculate new ending date by adding difference.
+        //
+        NSDate *n2 = [self.calendar dateByAddingComponents:diff toDate:n1 options:0];
+        
+        CXDurationPickerDate newEndDate = [CXDurationPickerUtils pickerDateFromDate:n2];
+        
+        _endDate.day = newEndDate.day;
+        _endDate.month = newEndDate.month;
+        _endDate.year = newEndDate.year;
+        
+        [self createDuration];
+        
+    }
+    
+}
+
+
+
 - (BOOL)shiftDurationToEndPickerDate:(CXDurationPickerDate)pickerDate error:(NSError **)error {
     // Convert picker-dates to NSDates so we easily can do some calcs on them.
     //

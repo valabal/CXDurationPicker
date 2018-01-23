@@ -85,6 +85,8 @@
 - (void)shiftDurationToEndPickerDate:(CXDurationPickerDate)pickerDate __attribute__((deprecated));
 - (void)shiftDurationToStartPickerDate:(CXDurationPickerDate)pickerDate __attribute__((deprecated));
 
+- (void)shiftDurationToStartPickerDate:(CXDurationPickerDate)pickerDate withDuration:(NSInteger)day;
+
 - (BOOL)shiftDurationToEndPickerDate:(CXDurationPickerDate)pickerDate error:(NSError **)error;
 - (BOOL)shiftDurationToStartPickerDate:(CXDurationPickerDate)pickerDate error:(NSError **)error;
 

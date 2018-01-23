@@ -18,7 +18,8 @@
 		01987E111AAD550C006F012F /* CXDurationPickerMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01987E0B1AAD550C006F012F /* CXDurationPickerMonthView.m */; };
 		01987E121AAD550C006F012F /* CXDurationPickerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01987E0D1AAD550C006F012F /* CXDurationPickerUtils.m */; };
 		01987E131AAD550C006F012F /* CXDurationPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01987E0F1AAD550C006F012F /* CXDurationPickerView.m */; };
-		0CCFD7F4A311EA1315BA10F1 /* libPods-CXDurationPickerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CD12B693DC5CCBD5F886EF /* libPods-CXDurationPickerDemo.a */; };
+		69327334A6F383ED55468CA9 /* libPods-CXDurationPickerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88930630922A1BAEA1D31847 /* libPods-CXDurationPickerDemo.a */; };
+		D167CFEBCB3CF1EE50912075 /* libPods-CXDurationPickerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7AF36B8CBDDC070DE79F46 /* libPods-CXDurationPickerDemoTests.a */; };
 		D63813AD1C72270B006C09A8 /* UIColor+CXDurationDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D63813AC1C72270B006C09A8 /* UIColor+CXDurationDefaults.m */; };
 /* End PBXBuildFile section */
 
@@ -55,12 +56,14 @@
 		01987E0D1AAD550C006F012F /* CXDurationPickerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CXDurationPickerUtils.m; path = ../../CXDurationPicker/CXDurationPickerUtils.m; sourceTree = "<group>"; };
 		01987E0E1AAD550C006F012F /* CXDurationPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CXDurationPickerView.h; path = ../../CXDurationPicker/CXDurationPickerView.h; sourceTree = "<group>"; };
 		01987E0F1AAD550C006F012F /* CXDurationPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CXDurationPickerView.m; path = ../../CXDurationPicker/CXDurationPickerView.m; sourceTree = "<group>"; };
-		42E9336D6E9B544FD5CDDDE0 /* Pods-CXDurationPickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDurationPickerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDurationPickerDemo/Pods-CXDurationPickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		85E43D292B7B55B586BE704B /* Pods-CXDurationPickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDurationPickerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDurationPickerDemo/Pods-CXDurationPickerDemo.release.xcconfig"; sourceTree = "<group>"; };
-		91818EB62720CF7386DD2D5F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7CD12B693DC5CCBD5F886EF /* libPods-CXDurationPickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDurationPickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D788513005EACD9DE800861 /* Pods-CXDurationPickerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDurationPickerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDurationPickerDemo/Pods-CXDurationPickerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		88930630922A1BAEA1D31847 /* libPods-CXDurationPickerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDurationPickerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7E65AA3FFB3DF1C068B5AC /* Pods-CXDurationPickerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDurationPickerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDurationPickerDemo/Pods-CXDurationPickerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		9D7AF36B8CBDDC070DE79F46 /* libPods-CXDurationPickerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CXDurationPickerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D63813AB1C72270B006C09A8 /* UIColor+CXDurationDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+CXDurationDefaults.h"; path = "../../CXDurationPicker/UIColor+CXDurationDefaults.h"; sourceTree = "<group>"; };
 		D63813AC1C72270B006C09A8 /* UIColor+CXDurationDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+CXDurationDefaults.m"; path = "../../CXDurationPicker/UIColor+CXDurationDefaults.m"; sourceTree = "<group>"; };
+		F347AC23C88F135662D20B57 /* Pods-CXDurationPickerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDurationPickerDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CXDurationPickerDemoTests/Pods-CXDurationPickerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF1E404088B8AB4BBDBCE856 /* Pods-CXDurationPickerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CXDurationPickerDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CXDurationPickerDemoTests/Pods-CXDurationPickerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CCFD7F4A311EA1315BA10F1 /* libPods-CXDurationPickerDemo.a in Frameworks */,
+				69327334A6F383ED55468CA9 /* libPods-CXDurationPickerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D167CFEBCB3CF1EE50912075 /* libPods-CXDurationPickerDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +92,8 @@
 				01987DDF1AAD5097006F012F /* CXDurationPickerDemo */,
 				01987DF91AAD5097006F012F /* CXDurationPickerDemoTests */,
 				01987DDE1AAD5097006F012F /* Products */,
-				8176A4D6B36960B6CCFFEFEA /* Pods */,
-				8A3B0F907772E530D4005195 /* Frameworks */,
+				AE377205BB7C9A411EBA479A /* Pods */,
+				47C4A60CEC0CA3964325427B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,22 +166,24 @@
 			name = CXDurationPicker;
 			sourceTree = "<group>";
 		};
-		8176A4D6B36960B6CCFFEFEA /* Pods */ = {
+		47C4A60CEC0CA3964325427B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42E9336D6E9B544FD5CDDDE0 /* Pods-CXDurationPickerDemo.debug.xcconfig */,
-				85E43D292B7B55B586BE704B /* Pods-CXDurationPickerDemo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8A3B0F907772E530D4005195 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B7CD12B693DC5CCBD5F886EF /* libPods-CXDurationPickerDemo.a */,
-				91818EB62720CF7386DD2D5F /* libPods.a */,
+				88930630922A1BAEA1D31847 /* libPods-CXDurationPickerDemo.a */,
+				9D7AF36B8CBDDC070DE79F46 /* libPods-CXDurationPickerDemoTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE377205BB7C9A411EBA479A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A7E65AA3FFB3DF1C068B5AC /* Pods-CXDurationPickerDemo.debug.xcconfig */,
+				6D788513005EACD9DE800861 /* Pods-CXDurationPickerDemo.release.xcconfig */,
+				F347AC23C88F135662D20B57 /* Pods-CXDurationPickerDemoTests.debug.xcconfig */,
+				FF1E404088B8AB4BBDBCE856 /* Pods-CXDurationPickerDemoTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,12 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01987E001AAD5097006F012F /* Build configuration list for PBXNativeTarget "CXDurationPickerDemo" */;
 			buildPhases = (
-				59FAFE43FBCA9E96BECA5849 /* Check Pods Manifest.lock */,
+				BB019792FC1B83F0B6FE8387 /* [CP] Check Pods Manifest.lock */,
 				01987DD91AAD5097006F012F /* Sources */,
 				01987DDA1AAD5097006F012F /* Frameworks */,
 				01987DDB1AAD5097006F012F /* Resources */,
-				DC6FD7D1121C38DF0CB8313F /* Copy Pods Resources */,
-				F9802359F8ACD1E3FA860FCE /* Embed Pods Frameworks */,
+				9D343F0B7E2B60EE2AB51B7C /* [CP] Embed Pods Frameworks */,
+				725AF30F17821B45D1AD61DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01987E031AAD5097006F012F /* Build configuration list for PBXNativeTarget "CXDurationPickerDemoTests" */;
 			buildPhases = (
+				D17577C6CCD4ADE0489780C8 /* [CP] Check Pods Manifest.lock */,
 				01987DF21AAD5097006F012F /* Sources */,
 				01987DF31AAD5097006F012F /* Frameworks */,
 				01987DF41AAD5097006F012F /* Resources */,
+				D6DCA02D2596DDAF12C2DE69 /* [CP] Embed Pods Frameworks */,
+				14FAE7C48A4B1A12564F97BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,29 +289,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		59FAFE43FBCA9E96BECA5849 /* Check Pods Manifest.lock */ = {
+		14FAE7C48A4B1A12564F97BE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CXDurationPickerDemoTests/Pods-CXDurationPickerDemoTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC6FD7D1121C38DF0CB8313F /* Copy Pods Resources */ = {
+		725AF30F17821B45D1AD61DC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,19 +319,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CXDurationPickerDemo/Pods-CXDurationPickerDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9802359F8ACD1E3FA860FCE /* Embed Pods Frameworks */ = {
+		9D343F0B7E2B60EE2AB51B7C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CXDurationPickerDemo/Pods-CXDurationPickerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB019792FC1B83F0B6FE8387 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D17577C6CCD4ADE0489780C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6DCA02D2596DDAF12C2DE69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CXDurationPickerDemoTests/Pods-CXDurationPickerDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -461,7 +515,7 @@
 		};
 		01987E011AAD5097006F012F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42E9336D6E9B544FD5CDDDE0 /* Pods-CXDurationPickerDemo.debug.xcconfig */;
+			baseConfigurationReference = 8A7E65AA3FFB3DF1C068B5AC /* Pods-CXDurationPickerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C2UZCAZ8FK;
@@ -476,7 +530,7 @@
 		};
 		01987E021AAD5097006F012F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85E43D292B7B55B586BE704B /* Pods-CXDurationPickerDemo.release.xcconfig */;
+			baseConfigurationReference = 6D788513005EACD9DE800861 /* Pods-CXDurationPickerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C2UZCAZ8FK;
@@ -491,6 +545,7 @@
 		};
 		01987E041AAD5097006F012F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F347AC23C88F135662D20B57 /* Pods-CXDurationPickerDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -512,6 +567,7 @@
 		};
 		01987E051AAD5097006F012F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF1E404088B8AB4BBDBCE856 /* Pods-CXDurationPickerDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
