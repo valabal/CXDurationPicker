@@ -73,25 +73,19 @@
     // If we're an overlap then don't draw the background as that will overwrite
     // any previous day grpahics.
     //
-        if (self.isToday) {
-            CGContextSetFillColorWithColor(context, self.todayBackgroundColor.CGColor);
-            
-            CGContextFillRect(context, CGRectMake(0.5, 0.5,
-                                                  self.bounds.size.width - 1,
-                                                  self.bounds.size.height - 1));
-        } else if (self.isDisabled) {
-            CGContextSetFillColorWithColor(context, self.disabledDayBackgroundColor.CGColor);
-            
-            CGContextFillRect(context, CGRectMake(0.5, 0.5,
-                                                  self.bounds.size.width - 1,
-                                                  self.bounds.size.height - 1));
-        } else {
-            CGContextSetFillColorWithColor(context, self.dayBackgroundColor.CGColor);
-            
-            CGContextFillRect(context, CGRectMake(0.5, 0.5,
-                                                  self.bounds.size.width - 1,
-                                                  self.bounds.size.height - 1));
-        }
+    if (self.isDisabled) {
+        CGContextSetFillColorWithColor(context, self.disabledDayBackgroundColor.CGColor);
+        
+        CGContextFillRect(context, CGRectMake(0.5, 0.5,
+                                              self.bounds.size.width - 1,
+                                              self.bounds.size.height - 1));
+    } else {
+        CGContextSetFillColorWithColor(context, self.dayBackgroundColor.CGColor);
+        
+        CGContextFillRect(context, CGRectMake(0.5, 0.5,
+                                              self.bounds.size.width - 1,
+                                              self.bounds.size.height - 1));
+    }
     
     // Draw calendar day border.
     //
@@ -132,22 +126,22 @@
     //
     CGColorRef color;
     
+    
     if (self.type == CXDurationPickerDayTypeStart
         || self.type == CXDurationPickerDayTypeEnd
         || self.type == CXDurationPickerDayTypeSingle
         || self.type == CXDurationPickerDayTypeOverlap) {
         color = self.terminalForegroundColor.CGColor;
-    } else if (self.isDisabled) {
+    }
+    else if (self.isToday) {
+        color = self.todayForegroundColor.CGColor;
+    }
+    else if (self.isDisabled) {
         color = self.disabledDayForegroundColor.CGColor;
     } else if (self.type == CXDurationPickerDayTypeTransit) {
         color = self.transitForegroundColor.CGColor;
     } else {
-        if (self.isToday) {
-            color = self.todayForegroundColor.CGColor;
-        } else {
-            color = self.dayForegroundColor.CGColor;
-        }
-        
+        color = self.dayForegroundColor.CGColor;
     }
     
     NSDictionary *attributesDict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -229,6 +223,33 @@
         }
     }
     
+    if (self.isToday) {
+        
+        if (self.roundedTerminals) {
+            float notBiggerThan = self.bounds.size.height * 0.60;
+            float notSmallerThan = ascenderHeight + 5;
+            
+            float circleDiameter = fmaxf(notBiggerThan, notSmallerThan);
+            
+            float circleX = (self.bounds.size.width - circleDiameter) / 2;
+            float circleY = (self.bounds.size.height - circleDiameter) / 2;
+            
+            CGContextSetFillColorWithColor(context, self.todayBackgroundColor.CGColor);
+            
+            CGContextBeginPath(context);
+            CGContextAddEllipseInRect(context, CGRectMake(circleX, circleY, circleDiameter, circleDiameter));
+            CGContextDrawPath(context, kCGPathFill);
+        } else {
+            CGContextSetFillColorWithColor(context, self.todayBackgroundColor.CGColor);
+            
+            CGContextFillRect(context, CGRectMake(0.5, 0.5,
+                                                  self.bounds.size.width - 1,
+                                                  self.bounds.size.height - 1));
+        }
+        
+    }
+    
+    
     // Draw circle.
     //
     if (self.type == CXDurationPickerDayTypeStart
@@ -257,7 +278,7 @@
                                                   self.bounds.size.width - 1,
                                                   self.bounds.size.height - 1));
         }
-
+        
     }
     
     if (self.type == CXDurationPickerDayTypeOverlap) {
@@ -283,7 +304,7 @@
                                                   self.bounds.size.width - 1,
                                                   self.bounds.size.height - 1));
         }
-
+        
     }
     
     // Draw day number.
