@@ -367,8 +367,12 @@
 
 - (void)setStartDate:(NSDate *)date withDuration:(NSUInteger)days {
     CXDurationPickerDate pickerDate = [CXDurationPickerUtils pickerDateFromDate:date];
-    
-    [self setStartPickerDate:pickerDate withDuration:days];
+    if (days>0){
+        [self setStartPickerDate:pickerDate withDuration:days];
+    }
+    else{
+        [self setStartDate:pickerDate];
+    }
 }
 
 - (void)setStartPickerDate:(CXDurationPickerDate)pickerDate withDuration:(NSUInteger)days {
