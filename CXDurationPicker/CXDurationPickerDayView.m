@@ -166,7 +166,7 @@
     // Draw rectangle for start day.
     //
     if (self.type == CXDurationPickerDayTypeStart) {
-        float notBiggerThan = self.bounds.size.height * 0.60;
+        float notBiggerThan = self.bounds.size.height * 0.80;
         float notSmallerThan = ascenderHeight + 5;
         
         float rectangleHeight = fmaxf(notBiggerThan, notSmallerThan);
@@ -183,7 +183,7 @@
                                               rectangleHeight - 1));
         
     } else if (self.type == CXDurationPickerDayTypeEnd) {
-        float notBiggerThan = self.bounds.size.height * 0.60;
+        float notBiggerThan = self.bounds.size.height * 0.80;
         float notSmallerThan = ascenderHeight + 5;
         
         float rectangleHeight = fmaxf(notBiggerThan, notSmallerThan);
@@ -201,7 +201,7 @@
     } else if (self.type == CXDurationPickerDayTypeTransit) {
         
         if (self.roundedTerminals) {
-            float notBiggerThan = self.bounds.size.height * 0.60;
+            float notBiggerThan = self.bounds.size.height * 0.80;
             float notSmallerThan = ascenderHeight + 5;
             
             float rectangleHeight = fmaxf(notBiggerThan, notSmallerThan);
@@ -223,31 +223,6 @@
         }
     }
     
-    if (self.isToday) {
-        
-        if (self.roundedTerminals) {
-            float notBiggerThan = self.bounds.size.height * 0.60;
-            float notSmallerThan = ascenderHeight + 5;
-            
-            float circleDiameter = fmaxf(notBiggerThan, notSmallerThan);
-            
-            float circleX = (self.bounds.size.width - circleDiameter) / 2;
-            float circleY = (self.bounds.size.height - circleDiameter) / 2;
-            
-            CGContextSetFillColorWithColor(context, self.todayBackgroundColor.CGColor);
-            
-            CGContextBeginPath(context);
-            CGContextAddEllipseInRect(context, CGRectMake(circleX, circleY, circleDiameter, circleDiameter));
-            CGContextDrawPath(context, kCGPathFill);
-        } else {
-            CGContextSetFillColorWithColor(context, self.todayBackgroundColor.CGColor);
-            
-            CGContextFillRect(context, CGRectMake(0.5, 0.5,
-                                                  self.bounds.size.width - 1,
-                                                  self.bounds.size.height - 1));
-        }
-        
-    }
     
     
     // Draw circle.
@@ -258,7 +233,7 @@
         || self.type == CXDurationPickerDayTypeOverlap) {
         
         if (self.roundedTerminals) {
-            float notBiggerThan = self.bounds.size.height * 0.60;
+            float notBiggerThan = self.bounds.size.height * 0.8;
             float notSmallerThan = ascenderHeight + 5;
             
             float circleDiameter = fmaxf(notBiggerThan, notSmallerThan);
@@ -284,7 +259,7 @@
     if (self.type == CXDurationPickerDayTypeOverlap) {
         
         if (self.roundedTerminals) {
-            float notBiggerThan = self.bounds.size.height * 0.80;
+            float notBiggerThan = self.bounds.size.height * 0.9;
             float notSmallerThan = ascenderHeight + 7;
             
             float circleDiameter = fmaxf(notBiggerThan, notSmallerThan);
@@ -306,6 +281,33 @@
         }
         
     }
+    
+    //draw marker
+    if (self.isToday) {
+        
+        float circleDiameter = 7;
+        
+        float circleX = (self.bounds.size.width - circleDiameter) / 2;
+        float circleY = (self.bounds.size.height - circleDiameter) / 2 - 15;
+        
+        struct CGColor *color = self.todayBackgroundColor.CGColor;
+        
+        if (self.type == CXDurationPickerDayTypeStart
+            || self.type == CXDurationPickerDayTypeEnd
+            || self.type == CXDurationPickerDayTypeSingle
+            || self.type == CXDurationPickerDayTypeOverlap) {
+            color = self.terminalForegroundColor.CGColor;
+        }
+        
+        CGContextSetFillColorWithColor(context, color);
+        
+        CGContextBeginPath(context);
+        CGContextAddEllipseInRect(context, CGRectMake(circleX, circleY, circleDiameter, circleDiameter));
+        CGContextDrawPath(context, kCGPathFill);
+        
+    }
+    
+    
     
     // Draw day number.
     //
