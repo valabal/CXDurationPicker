@@ -102,7 +102,7 @@
         NSLog(@"monthview layout: Nothing to do.");
         return;
     }
-
+    
     NSDate *today = [NSDate date];
     NSDateComponents *todayComponents = [[NSCalendar currentCalendar]
                                          components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear
@@ -111,7 +111,7 @@
     NSDateComponents *yesterdayComponents = [[NSCalendar currentCalendar]
                                              components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear
                                              fromDate:yesterday];
-
+    
     float cellSize = self.bounds.size.width / 7;
     
     self.cellWidth = floor(cellSize);
@@ -120,8 +120,8 @@
     self.dateLabel.frame = CGRectMake(self.monthOffset, 0,
                                       self.bounds.size.width - self.monthOffset,
                                       self.monthTitleHeight + 4);
-
-    float yOffset = self.dateLabel.frame.size.height + 10;
+    
+    float yOffset = self.dateLabel.frame.size.height + 25;
     
     for (int i = 0; i < 7; i++) {
         float xOffset = 0;
@@ -275,10 +275,10 @@
 - (void)setupViews {
     self.dateString = [NSString stringWithFormat:@"%@", [self monthNameFromDate:self.date]];
     
-    UIFont *dateFont = [UIFont fontWithName:@"HelveticaNeue" size:self.monthTitleHeight];
+    UIFont *dateFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:self.monthTitleHeight];
     
-//    [self setIsAccessibilityElement:YES];
-//    self.accessibilityIdentifier = self.dateString;
+    //    [self setIsAccessibilityElement:YES];
+    //    self.accessibilityIdentifier = self.dateString;
     
     self.dateLabel = [[UILabel alloc] init];
     
@@ -288,7 +288,7 @@
     [self.dateLabel setText:self.dateString];
     
     [self addSubview:self.dateLabel];
-
+    
     // Build a localized string array instead of hardcoded SUN,MON...FRI,SAT,SUN
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     NSMutableArray *daysOfWeek = [[NSMutableArray alloc] init];
@@ -335,8 +335,8 @@
                                          fromDate:today];
     NSDate *yesterday = [today dateByAddingTimeInterval: -86400.0];
     NSDateComponents *yesterdayComponents = [[NSCalendar currentCalendar]
-                                         components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear
-                                         fromDate:yesterday];
+                                             components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear
+                                             fromDate:yesterday];
     
     for (int i = 0; i < self.numDays; i++) {
         float xOffset = 0;
@@ -364,9 +364,9 @@
                        && self.components.month < todayComponents.month) {
                 v.isDisabled = YES;
             } else if (self.components.year == yesterdayComponents.year
-                      && self.components.month == yesterdayComponents.month
-                      && i == yesterdayComponents.day - 1
-                      && !self.disableYesterday) {
+                       && self.components.month == yesterdayComponents.month
+                       && i == yesterdayComponents.day - 1
+                       && !self.disableYesterday) {
                 v.isDisabled = NO;
             } else if (self.components.year == todayComponents.year
                        && self.components.month == todayComponents.month
@@ -376,7 +376,7 @@
         } else {
             v.isDisabled = NO;
         }
-
+        
         if (self.components.year == todayComponents.year
             && self.components.month == todayComponents.month
             && i == todayComponents.day - 1) {
